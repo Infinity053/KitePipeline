@@ -1,0 +1,19 @@
+{
+	"name": "JSONDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DFtoStorageAcc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Kite Latest Data",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {}
+	}
+}
