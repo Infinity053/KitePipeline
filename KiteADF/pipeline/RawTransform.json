@@ -17,7 +17,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "JSONDataSet",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": {
+								"value": "@variables('LatestFile')",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
