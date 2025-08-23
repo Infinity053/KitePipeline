@@ -5,11 +5,20 @@
 			"referenceName": "DFtoStorageAcc",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
 				"folderPath": "Kite Latest Data",
 				"fileSystem": "raw"
 			}
