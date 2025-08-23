@@ -1,0 +1,9 @@
+{
+	"name": "KiteDF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b2c50cb9-4147-4479-a344-025657a66fb1",
+		"tenantId": "46fe5f5d-dd30-4f13-8601-d04ec1d45bad"
+	}
+}
