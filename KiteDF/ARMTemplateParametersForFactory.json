@@ -10,6 +10,9 @@
 		},
 		"DFtoStorageAcc_properties_typeProperties_url": {
 			"value": "https://kitestorageacc.dfs.core.windows.net/"
+		},
+		"TriggerRawPipeline_properties_typeProperties_scope": {
+			"value": "/subscriptions/3008907c-198b-4250-b519-755bf83bd5c2/resourceGroups/KiteRG/providers/Microsoft.Storage/storageAccounts/kitestorageacc"
 		}
 	}
 }
