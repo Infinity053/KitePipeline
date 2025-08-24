@@ -1,0 +1,20 @@
+{
+	"name": "RawParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DFtoStorageAcc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Kite Parquet",
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
