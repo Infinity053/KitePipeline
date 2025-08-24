@@ -1,0 +1,18 @@
+{
+	"name": "TriggerRawPipeline",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/raw/blobs/Kite Latest Data/",
+			"blobPathEndsWith": ".json",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/3008907c-198b-4250-b519-755bf83bd5c2/resourceGroups/KiteRG/providers/Microsoft.Storage/storageAccounts/kitestorageacc",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
