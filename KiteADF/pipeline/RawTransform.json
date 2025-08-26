@@ -155,7 +155,284 @@
 							"type": "ParquetWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['status']"
+								},
+								"sink": {
+									"name": "status"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']"
+								},
+								"sink": {
+									"name": "user"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['tradingsymbol']"
+								},
+								"sink": {
+									"name": "tradingsymbol"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['exchange']"
+								},
+								"sink": {
+									"name": "exchange"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['instrument_token']"
+								},
+								"sink": {
+									"name": "instrument_token"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['isin']"
+								},
+								"sink": {
+									"name": "isin"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['product']"
+								},
+								"sink": {
+									"name": "product"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['price']"
+								},
+								"sink": {
+									"name": "price"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['quantity']"
+								},
+								"sink": {
+									"name": "quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['used_quantity']"
+								},
+								"sink": {
+									"name": "used_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['t1_quantity']"
+								},
+								"sink": {
+									"name": "t1_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['realised_quantity']"
+								},
+								"sink": {
+									"name": "realised_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['authorised_quantity']"
+								},
+								"sink": {
+									"name": "authorised_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['authorised_date']"
+								},
+								"sink": {
+									"name": "authorised_date"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['authorisation']"
+								},
+								"sink": {
+									"name": "authorisation"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['opening_quantity']"
+								},
+								"sink": {
+									"name": "opening_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['short_quantity']"
+								},
+								"sink": {
+									"name": "short_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['collateral_quantity']"
+								},
+								"sink": {
+									"name": "collateral_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['collateral_type']"
+								},
+								"sink": {
+									"name": "collateral_type"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['discrepancy']"
+								},
+								"sink": {
+									"name": "discrepancy"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['average_price']"
+								},
+								"sink": {
+									"name": "average_price"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['last_price']"
+								},
+								"sink": {
+									"name": "last_price"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['close_price']"
+								},
+								"sink": {
+									"name": "close_price"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['pnl']"
+								},
+								"sink": {
+									"name": "pnl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['day_change']"
+								},
+								"sink": {
+									"name": "day_change"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['day_change_percentage']"
+								},
+								"sink": {
+									"name": "day_change_percentage"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['mtf']['quantity']"
+								},
+								"sink": {
+									"name": "mtf_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['mtf']['used_quantity']"
+								},
+								"sink": {
+									"name": "mtf_used_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['mtf']['average_price']"
+								},
+								"sink": {
+									"name": "mtf_average_price"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['mtf']['value']"
+								},
+								"sink": {
+									"name": "value"
+								}
+							},
+							{
+								"source": {
+									"path": "$['holdings'][0]['mtf']['initial_margin']"
+								},
+								"sink": {
+									"name": "initial_margin"
+								}
+							},
+							{
+								"source": {
+									"path": "$['positions']['net'][0]"
+								},
+								"sink": {
+									"name": "positions_net"
+								}
+							},
+							{
+								"source": {
+									"path": "$['positions']['day'][0]"
+								},
+								"sink": {
+									"name": "positions_day"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotes']"
+								},
+								"sink": {
+									"name": "quotes"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
