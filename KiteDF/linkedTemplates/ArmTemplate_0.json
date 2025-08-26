@@ -500,14 +500,6 @@
 									},
 									{
 										"source": {
-											"path": "$['holdings'][0]['authorisation']"
-										},
-										"sink": {
-											"name": "authorisation"
-										}
-									},
-									{
-										"source": {
 											"path": "$['holdings'][0]['opening_quantity']"
 										},
 										"sink": {
@@ -639,7 +631,8 @@
 											"path": "$['positions']['net'][0]"
 										},
 										"sink": {
-											"name": "positions_net"
+											"name": "positions_net",
+											"type": "String"
 										}
 									},
 									{
@@ -647,15 +640,8 @@
 											"path": "$['positions']['day'][0]"
 										},
 										"sink": {
-											"name": "positions_day"
-										}
-									},
-									{
-										"source": {
-											"path": "$['quotes']"
-										},
-										"sink": {
-											"name": "quotes"
+											"name": "positions_day",
+											"type": "String"
 										}
 									}
 								]
