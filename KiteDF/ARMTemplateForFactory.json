@@ -248,7 +248,131 @@
 						"fileSystem": "raw"
 					}
 				},
-				"schema": {}
+				"schema": {
+					"type": "object",
+					"properties": {
+						"status": {
+							"type": "string"
+						},
+						"user": {
+							"type": "string"
+						},
+						"holdings": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"tradingsymbol": {
+										"type": "string"
+									},
+									"exchange": {
+										"type": "string"
+									},
+									"instrument_token": {
+										"type": "integer"
+									},
+									"isin": {
+										"type": "string"
+									},
+									"product": {
+										"type": "string"
+									},
+									"price": {
+										"type": "integer"
+									},
+									"quantity": {
+										"type": "integer"
+									},
+									"used_quantity": {
+										"type": "integer"
+									},
+									"t1_quantity": {
+										"type": "integer"
+									},
+									"realised_quantity": {
+										"type": "integer"
+									},
+									"authorised_quantity": {
+										"type": "integer"
+									},
+									"authorised_date": {
+										"type": "string"
+									},
+									"authorisation": {
+										"type": "object"
+									},
+									"opening_quantity": {
+										"type": "integer"
+									},
+									"short_quantity": {
+										"type": "integer"
+									},
+									"collateral_quantity": {
+										"type": "integer"
+									},
+									"collateral_type": {
+										"type": "string"
+									},
+									"discrepancy": {
+										"type": "boolean"
+									},
+									"average_price": {
+										"type": "integer"
+									},
+									"last_price": {
+										"type": "number"
+									},
+									"close_price": {
+										"type": "number"
+									},
+									"pnl": {
+										"type": "number"
+									},
+									"day_change": {
+										"type": "number"
+									},
+									"day_change_percentage": {
+										"type": "number"
+									},
+									"mtf": {
+										"type": "object",
+										"properties": {
+											"quantity": {
+												"type": "integer"
+											},
+											"used_quantity": {
+												"type": "integer"
+											},
+											"average_price": {
+												"type": "integer"
+											},
+											"value": {
+												"type": "integer"
+											},
+											"initial_margin": {
+												"type": "integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						"positions": {
+							"type": "object",
+							"properties": {
+								"net": {
+									"type": "array"
+								},
+								"day": {
+									"type": "array"
+								}
+							}
+						},
+						"quotes": {
+							"type": "object"
+						}
+					}
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/DFtoStorageAcc')]"
