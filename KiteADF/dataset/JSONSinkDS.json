@@ -1,0 +1,19 @@
+{
+	"name": "JSONSinkDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DFtoStorageAcc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Kite JSON",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {}
+	}
+}
